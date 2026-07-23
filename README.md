@@ -5,7 +5,7 @@ A single-page portfolio for a **Data Analyst & BI Developer**, built around a
 terminal / SQL editor aesthetic. No framework, no build step — one hand-written
 `index.html` (HTML, CSS, and vanilla JS).
 
-🔗 **Live:** https://skpkush.github.io/Sumit_analystics/
+🔗 **Live:** 
 
 ## Highlights
 
