@@ -282,7 +282,7 @@ footer .ok{display:block;margin-bottom:6px}
   <table class="ptable">
     <caption>-- career_stats · all numbers from shipped work</caption>
     <thead><tr><th>certifications</th><th>records_modeled</th><th>dax_measures</th><th>end_to_end_builds</th></tr></thead>
-    <tbody><tr><td><em>5</em>×</td><td><em>558K</em>+</td><td><em>40</em>+</td><td><em>3</em></td></tr></tbody>
+    <tbody><tr><td><em>5</em>×</td><td><em>558K</em>+</td><td><em>40</em>+</td><td><em>4</em></td></tr></tbody>
   </table>
 </header>
 
@@ -290,13 +290,14 @@ footer .ok{display:block;margin-bottom:6px}
   <div class="wrap reveal">
     <span class="file"><b>~/about.md</b> · last modified: today</span>
     <h2 class="h2">$ whoami</h2>
-    <p class="lead">I turn raw data into decisions a business can act on — end to end, no handoffs. Three industries, three production-grade builds.</p>
+    <p class="lead">I turn raw data into decisions a business can act on — end to end, no handoffs. Four industries, four production-grade builds.</p>
     <ul class="whoami">
       <li>Engineered a fraud model across <b>558K Medicare claims</b> — surfaced a <b>226× fraud concentration</b> the eye would&#8217;ve missed</li>
       <li>Built a platform processing <b>9M+ NAV rows</b> across <b>10,571 funds</b>, with ML forecasting</li>
       <li>Modeled <b>112K e-commerce orders</b> into a Power BI warehouse with <b>40+ DAX measures</b></li>
+      <li>Shipped <b>QueryScratch</b> — <b>500 SQL practice questions</b> and a browser-native query sandbox, free for students</li>
     </ul>
-    <p class="lead">I own the full chain: Azure pipelines → SQL star schemas → Power BI → ML models. Finance, Healthcare, E-Commerce — different data, same discipline: every dashboard ends in a decision, not decoration.</p>
+    <p class="lead">I own the full chain: Azure pipelines → SQL star schemas → Power BI → ML models. Finance, Healthcare, E-Commerce, Education — different data, same discipline: every dashboard ends in a decision, not decoration.</p>
     <p class="lead" style="margin-top:14px">Two years on the business side of financial services means I frame findings the way stakeholders actually use them — and flag what matters before a report ships.</p>
     <p class="lead" style="margin-top:14px"><span class="ok mono">▸</span> Open to full-time Data Analyst / BI Developer roles — ready to own reporting end to end.</p>
   </div>
@@ -314,6 +315,7 @@ footer .ok{display:block;margin-bottom:6px}
       <div class="cfg-row"><div class="cfg-key">programming<i>:</i></div><div class="tokens"><span class="tok">Python</span><span class="tok">Pandas</span><span class="tok">NumPy</span><span class="tok">scikit-learn</span><span class="tok">Streamlit</span></div></div>
       <div class="cfg-row"><div class="cfg-key">cloud<i>:</i></div><div class="tokens"><span class="tok">Microsoft Azure</span><span class="tok">AWS</span></div></div>
       <div class="cfg-row"><div class="cfg-key">machine_learning<i>:</i></div><div class="tokens"><span class="tok">Forecasting · Prophet</span><span class="tok">Classification</span><span class="tok">Clustering · KMeans</span><span class="tok">RFM Analysis</span></div></div>
+      <div class="cfg-row"><div class="cfg-key">web_apps<i>:</i></div><div class="tokens"><span class="tok">Full-Stack Web</span><span class="tok">Supabase</span><span class="tok">Auth</span><span class="tok">sql.js · WebAssembly</span></div></div>
       <div class="cfg-row"><div class="cfg-key">automation<i>:</i></div><div class="tokens"><span class="tok">n8n</span><span class="tok">Workflow Automation</span><span class="tok">API Integrations</span></div></div>
     </div>
   </div>
@@ -330,17 +332,24 @@ footer .ok{display:block;margin-bottom:6px}
       <button class="tab on" data-f="all">all.sql</button>
       <button class="tab" data-f="bi">analytics_bi.sql</button>
       <button class="tab" data-f="ml">machine_learning.sql</button>
+      <button class="tab" data-f="app">data_apps.sql</button>
     </div>
     <div class="qbar reveal"><span class="prompt">sumit=#</span> <span id="projQuery"><span class="hl-k">SELECT</span> <span class="hl-o">*</span> <span class="hl-k">FROM</span> projects <span class="hl-k">ORDER BY</span> impact <span class="hl-k">DESC</span>;</span></div>
-    <div class="rowinfo reveal"><span id="rowCount">4</span> rows returned in 0.31s</div>
+    <div class="rowinfo reveal"><span id="rowCount">5</span> rows returned in 0.31s</div>
     <div class="proj-grid">
+      <article class="proj reveal" data-cat="app">
+        <div class="ptags"><span>[live] [education] [full-stack]</span><span><a href="https://www.queryscratch.com/" target="_blank" rel="noopener">live ↗</a></span></div>
+        <h3>QueryScratch — Learn SQL by Doing</h3>
+        <p>A free SQL learning platform for students: <b>500 practice questions</b> and an in-browser SQL sandbox that runs real queries client-side via <b>sql.js / WebAssembly</b> — no install, no server round-trip. Streak tracking and per-user progress on Supabase auth.</p>
+        <div class="stackline"><b>stack:</b> sql · sql.js · webassembly · supabase · full-stack web</div>
+      </article>
       <article class="proj reveal" data-cat="ml bi">
         <div class="ptags"><span>[ml] [azure] [bfsi]</span><span><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics" target="_blank" rel="noopener">github ↗</a></span></div>
         <h3>Healthcare Provider Fraud Detection</h3>
         <p>Fraud analytics across <b>558K+ Medicare claims</b>: an Azure Data Factory pipeline into PostgreSQL, a scikit-learn fraud-detection model, and a Power BI dashboard for investigating flagged providers.</p>
         <div class="stackline"><b>stack:</b> python · scikit-learn · azure adf · postgresql · power bi</div>
       </article>
-      <article class="proj reveal" data-cat="bi ml">
+      <article class="proj reveal" data-cat="bi ml app">
         <div class="ptags"><span>[live] [finance]</span><span><a href="https://mf-analytics-platform-nmndaxxuzmzhckvswpue3h.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener">github ↗</a></span></div>
         <h3>Mutual Fund Analytics Platform</h3>
         <p>A live platform on Yahoo Finance + AMFI data: automated ETL, <b>Prophet</b> return forecasting, and fund performance &amp; risk dashboards — deployed as a Streamlit app.</p>
@@ -352,21 +361,22 @@ footer .ok{display:block;margin-bottom:6px}
         <p>Star-schema warehouse (<b>4 dims + 1 fact, 112,650 rows</b>) fed by Azure Blob → ADF → PostgreSQL, with a Power BI report carrying <b>40+ DAX measures</b>, AI visuals, and what-if pricing simulation.</p>
         <div class="stackline"><b>stack:</b> sql · postgresql · azure · power bi · dax</div>
       </article>
-      <article class="proj reveal" data-cat="ml">
+      <article class="proj reveal" data-cat="ml app">
         <div class="ptags"><span>[ml] [segmentation]</span><span><a href="https://customer-segmentation-g4vjra3jvttxstxguxhnff.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/Customer-Segmentation" target="_blank" rel="noopener">github ↗</a></span></div>
         <h3>Customer Segmentation</h3>
         <p>RFM scoring + <b>KMeans</b> clustering on transaction data, shipped as an interactive Streamlit app for exploring customer segments and targeting.</p>
         <div class="stackline"><b>stack:</b> python · kmeans · rfm · streamlit</div>
       </article>
     </div>
-    <div class="qbar reveal" style="margin-top:36px"><span class="prompt">sumit=#</span> <span class="hl-k">SELECT</span> project, domain, scale, impact <span class="hl-k">FROM</span> portfolio.builds <span class="hl-k">ORDER BY</span> scale <span class="hl-k">DESC</span>;</span></div>
+    <div class="qbar reveal" style="margin-top:36px"><span class="prompt">sumit=#</span> <span class="hl-k">SELECT</span> project, domain, scale, impact <span class="hl-k">FROM</span> portfolio.builds <span class="hl-k">ORDER BY</span> scale <span class="hl-k">DESC</span>;</div>
     <table class="resultset reveal">
-      <caption>(4 rows · 0.018s) — headline numbers, straight from shipped work</caption>
+      <caption>(5 rows · 0.018s) — headline numbers, straight from shipped work</caption>
       <thead><tr><th>project</th><th>domain</th><th>scale</th><th>impact</th></tr></thead>
       <tbody>
         <tr><td>Healthcare Fraud Detection</td><td>healthcare</td><td>558K+ claims</td><td class="v">226× fraud concentration</td></tr>
         <tr><td>Mutual Fund Platform</td><td>finance</td><td>9M+ NAV rows</td><td class="v">10,571 funds</td></tr>
         <tr><td>Olist E-Commerce</td><td>e-commerce</td><td>112,650 rows</td><td class="v">40+ DAX measures</td></tr>
+        <tr><td>QueryScratch</td><td>education</td><td>500 questions</td><td class="v">free SQL sandbox for students</td></tr>
         <tr><td>Customer Segmentation</td><td>retail</td><td>RFM + KMeans</td><td class="v">live Streamlit app</td></tr>
       </tbody>
     </table>
@@ -445,6 +455,7 @@ footer .ok{display:block;margin-bottom:6px}
       <button class="pal-item" data-go="#contact"><span class="pi">→</span>contact.json</button>
       <button class="pal-item" data-act="resume"><span class="pi">↓</span>download resume.pdf</button>
       <button class="pal-item" data-act="email"><span class="pi">⧉</span>copy email address</button>
+      <button class="pal-item" data-act="queryscratch"><span class="pi">↗</span>open queryscratch.com</button>
       <button class="pal-item" data-act="github"><span class="pi">↗</span>open github profile</button>
       <button class="pal-item" data-act="linkedin"><span class="pi">↗</span>open linkedin profile</button>
       <button class="pal-item" data-act="theme"><span class="pi">◐</span>toggle theme</button>
@@ -560,6 +571,7 @@ function runItem(it){
     if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(EMAIL); }
     it.querySelector(".pi").textContent = "✓";
   }
+  else if (act === "queryscratch"){ window.open("https://www.queryscratch.com/", "_blank", "noopener"); }
   else if (act === "github"){ window.open("https://github.com/Skpkush", "_blank", "noopener"); }
   else if (act === "linkedin"){ window.open("https://www.linkedin.com/in/sumit-k-prajapat/", "_blank", "noopener"); }
   else if (act === "theme"){ setTheme(theme === "light" ? "dark" : "light"); }
