@@ -34,9 +34,8 @@ python -m http.server 8000
 ## Structure
 
 ```
-index.html                      # the entire site
-resume/
-  └─ Sumit_Prajapat_Resume.pdf  # downloadable resume
+index.html                          # the entire site
+Sumit_Prajapat_Data_Analyst.pdf     # downloadable resume
 ```
 
 ## Contact

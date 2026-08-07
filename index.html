@@ -273,8 +273,7 @@ footer .ok{display:block;margin-bottom:6px}
   <p class="lead">I build end-to-end analytics — Azure pipelines into SQL warehouses into Power BI dashboards into ML models — and turn raw data into decisions a business can act on.</p>
   <div class="cta">
     <a class="btn btn-solid" href="#projects"><span class="run">▶</span> View projects</a>
-    <!-- drop your PDF in /resume named Sumit_Prajapat_Resume.pdf -->
-    <a class="btn" href="Sumit_Prajapat_Resume.pdf" download>↓ Download resume</a>
+    <a class="btn" href="Sumit_Prajapat_Data_Analyst.pdf" download="Sumit_Prajapat_Data_Analyst.pdf">↓ Download resume</a>
     <a class="btn" href="https://www.linkedin.com/in/sumit-k-prajapat/" target="_blank" rel="noopener">in ↗ LinkedIn</a>
     <a class="btn" href="#contact">✉ Contact me</a>
   </div>
@@ -566,7 +565,7 @@ function runItem(it){
   closePal();
   var go = it.getAttribute("data-go"), act = it.getAttribute("data-act");
   if (go){ var el = document.querySelector(go); if (el) el.scrollIntoView({behavior: reduced ? "auto" : "smooth"}); }
-  else if (act === "resume"){ var a = document.createElement("a"); a.href = "Sumit_Prajapat_Resume.pdf"; a.download = ""; document.body.appendChild(a); a.click(); a.remove(); }
+  else if (act === "resume"){ var a = document.createElement("a"); a.href = "Sumit_Prajapat_Data_Analyst.pdf"; a.download = "Sumit_Prajapat_Data_Analyst.pdf"; document.body.appendChild(a); a.click(); a.remove(); }
   else if (act === "email"){
     if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(EMAIL); }
     it.querySelector(".pi").textContent = "✓";
