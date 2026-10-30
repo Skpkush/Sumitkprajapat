@@ -6,7 +6,7 @@
 <title>Sumit Prajapat — Data Analyst & BI Developer</title>
 <meta name="description" content="Data Analyst and BI Developer from Rajasthan, India. PL-300, AZ-900, DP-900, AWS and CFA Investment Foundations certified. End-to-end analytics: Azure ETL pipelines, SQL warehouses, Power BI dashboards and ML models.">
 <meta property="og:title" content="Sumit Prajapat — Data Analyst & BI Developer">
-<meta property="og:description" content="An analyst's workbench: Azure pipelines → SQL warehouses → Power BI → ML. 5× certified. Open to Data Analyst & BI Developer roles.">
+<meta property="og:description" content="An analyst's workbench: Azure pipelines → SQL warehouses → Power BI → ML. 6 end-to-end builds, 5× certified. Open to Data Analyst & BI Developer roles.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -155,6 +155,23 @@ nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,
 .stackline{font-family:var(--mono);font-size:12px;color:var(--faint)}
 .stackline b{color:var(--grey);font-weight:500}
 
+.proj.feat{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+.proj.feat.hide{display:none}
+.feat-body{display:flex;flex-direction:column;gap:11px;min-width:0}
+.feat-badge{display:inline-block;align-self:flex-start;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:3px 10px}
+.feat-shots{display:flex;flex-direction:column;gap:12px;min-width:0}
+.feat-shot{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--wash)}
+.feat-shot img{display:block;width:100%;height:auto;transition:transform .35s}
+.proj.feat:hover .feat-shot img{transform:scale(1.02)}
+.feat-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:2px}
+.feat-stats div{border:1px solid var(--line);border-radius:8px;padding:9px 10px;background:var(--bg)}
+.feat-stats em{display:block;font-style:normal;font-family:var(--mono);font-weight:800;font-size:17px;color:var(--accent)}
+.feat-stats span{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+.proj .feat-list{list-style:none;color:var(--grey);font-size:14px;display:flex;flex-direction:column;gap:5px}
+.proj .feat-list li::before{content:"▸ ";color:var(--accent);font-family:var(--mono)}
+.proj .feat-list b{color:var(--ink);font-family:var(--mono);font-weight:500;font-size:13px}
+@media (max-width:880px){.proj.feat{grid-template-columns:1fr}.feat-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 /* ---- services ---- */
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:34px}
 .svc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;transition:border-color .2s,transform .2s}
@@ -273,7 +290,6 @@ footer .ok{display:block;margin-bottom:6px}
   <p class="lead">I build end-to-end analytics — Azure pipelines into SQL warehouses into Power BI dashboards into ML models — and turn raw data into decisions a business can act on.</p>
   <div class="cta">
     <a class="btn btn-solid" href="#projects"><span class="run">▶</span> View projects</a>
-    <!-- drop your PDF in /resume named Sumit_Prajapat_Resume.pdf -->
     <a class="btn" href="Sumit_Prajapat_Data_Analyst.pdf" download>↓ Download resume</a>
     <a class="btn" href="https://www.linkedin.com/in/sumit-k-prajapat/" target="_blank" rel="noopener">in ↗ LinkedIn</a>
     <a class="btn" href="#contact">✉ Contact me</a>
@@ -282,7 +298,7 @@ footer .ok{display:block;margin-bottom:6px}
   <table class="ptable">
     <caption>-- career_stats · all numbers from shipped work</caption>
     <thead><tr><th>certifications</th><th>records_modeled</th><th>dax_measures</th><th>end_to_end_builds</th></tr></thead>
-    <tbody><tr><td><em>5</em>×</td><td><em>558K</em>+</td><td><em>40</em>+</td><td><em>4</em></td></tr></tbody>
+    <tbody><tr><td><em>5</em>×</td><td><em>558K</em>+</td><td><em>40</em>+</td><td><em>6</em></td></tr></tbody>
   </table>
 </header>
 
@@ -290,14 +306,15 @@ footer .ok{display:block;margin-bottom:6px}
   <div class="wrap reveal">
     <span class="file"><b>~/about.md</b> · last modified: today</span>
     <h2 class="h2">$ whoami</h2>
-    <p class="lead">I turn raw data into decisions a business can act on — end to end, no handoffs. Four industries, four production-grade builds.</p>
+    <p class="lead">I turn raw data into decisions a business can act on — end to end, no handoffs. Five industries, six production-grade builds.</p>
     <ul class="whoami">
+      <li>Analysed <b>1.46M real grocery transactions</b> — found <b>50.6% of coupon redemptions</b> go to shoppers already buying, and reconciled a Power BI report to SQL <b>58/58</b></li>
       <li>Engineered a fraud model across <b>558K Medicare claims</b> — surfaced a <b>226× fraud concentration</b> the eye would&#8217;ve missed</li>
       <li>Built a platform processing <b>9M+ NAV rows</b> across <b>10,571 funds</b>, with ML forecasting</li>
       <li>Modeled <b>112K e-commerce orders</b> into a Power BI warehouse with <b>40+ DAX measures</b></li>
       <li>Shipped <b>QueryScratch</b> — <b>500 SQL practice questions</b> and a browser-native query sandbox, free for students</li>
     </ul>
-    <p class="lead">I own the full chain: Azure pipelines → SQL star schemas → Power BI → ML models. Finance, Healthcare, E-Commerce, Education — different data, same discipline: every dashboard ends in a decision, not decoration.</p>
+    <p class="lead">I own the full chain: Azure pipelines → SQL star schemas → Power BI → ML models. Retail, Finance, Healthcare, E-Commerce, Education — different data, same discipline: every dashboard ends in a decision, not decoration.</p>
     <p class="lead" style="margin-top:14px">Two years on the business side of financial services means I frame findings the way stakeholders actually use them — and flag what matters before a report ships.</p>
     <p class="lead" style="margin-top:14px"><span class="ok mono">▸</span> Open to full-time Data Analyst / BI Developer roles — ready to own reporting end to end.</p>
   </div>
@@ -311,10 +328,10 @@ footer .ok{display:block;margin-bottom:6px}
     </div>
     <div class="cfg reveal">
       <div class="cfg-row"><div class="cfg-key">analytics_bi<i>:</i></div><div class="tokens"><span class="tok">Power BI</span><span class="tok">DAX</span><span class="tok">Power Query</span><span class="tok">Data Modeling</span><span class="tok">Data Visualization</span><span class="tok">Excel</span></div></div>
-      <div class="cfg-row"><div class="cfg-key">sql_and_etl<i>:</i></div><div class="tokens"><span class="tok">SQL</span><span class="tok">PostgreSQL</span><span class="tok">Azure Data Factory</span><span class="tok">ETL Pipelines</span><span class="tok">Data Warehousing</span></div></div>
+      <div class="cfg-row"><div class="cfg-key">sql_and_etl<i>:</i></div><div class="tokens"><span class="tok">SQL</span><span class="tok">PostgreSQL</span><span class="tok">DuckDB</span><span class="tok">Azure Data Factory</span><span class="tok">ETL Pipelines</span><span class="tok">Data Warehousing</span></div></div>
       <div class="cfg-row"><div class="cfg-key">programming<i>:</i></div><div class="tokens"><span class="tok">Python</span><span class="tok">Pandas</span><span class="tok">NumPy</span><span class="tok">scikit-learn</span><span class="tok">Streamlit</span></div></div>
       <div class="cfg-row"><div class="cfg-key">cloud<i>:</i></div><div class="tokens"><span class="tok">Microsoft Azure</span><span class="tok">AWS</span></div></div>
-      <div class="cfg-row"><div class="cfg-key">machine_learning<i>:</i></div><div class="tokens"><span class="tok">Forecasting · Prophet</span><span class="tok">Classification</span><span class="tok">Clustering · KMeans</span><span class="tok">RFM Analysis</span></div></div>
+      <div class="cfg-row"><div class="cfg-key">machine_learning<i>:</i></div><div class="tokens"><span class="tok">Forecasting · Prophet</span><span class="tok">Classification</span><span class="tok">Clustering · KMeans</span><span class="tok">RFM Analysis</span><span class="tok">Causal Inference · DiD</span><span class="tok">Hypothesis Testing</span></div></div>
       <div class="cfg-row"><div class="cfg-key">web_apps<i>:</i></div><div class="tokens"><span class="tok">Full-Stack Web</span><span class="tok">Supabase</span><span class="tok">Auth</span><span class="tok">sql.js · WebAssembly</span></div></div>
       <div class="cfg-row"><div class="cfg-key">automation<i>:</i></div><div class="tokens"><span class="tok">n8n</span><span class="tok">Workflow Automation</span><span class="tok">API Integrations</span></div></div>
     </div>
@@ -335,8 +352,32 @@ footer .ok{display:block;margin-bottom:6px}
       <button class="tab" data-f="app">data_apps.sql</button>
     </div>
     <div class="qbar reveal"><span class="prompt">sumit=#</span> <span id="projQuery"><span class="hl-k">SELECT</span> <span class="hl-o">*</span> <span class="hl-k">FROM</span> projects <span class="hl-k">ORDER BY</span> impact <span class="hl-k">DESC</span>;</span></div>
-    <div class="rowinfo reveal"><span id="rowCount">5</span> rows returned in 0.31s</div>
+    <div class="rowinfo reveal"><span id="rowCount">6</span> rows returned in 0.31s</div>
     <div class="proj-grid">
+      <article class="proj feat reveal" data-cat="bi ml app">
+        <div class="feat-body">
+          <div class="ptags"><span>[new] [retail] [causal-stats]</span><span><a href="https://grocery-retail-analytics-gej2xcqxwhwypm7lvjhher.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener">github ↗</a></span></div>
+          <span class="feat-badge">★ latest build</span>
+          <h3>Grocery Retail Analytics — Does Promo Spend Work?</h3>
+          <p>1.46M real transactions from 2,469 households (dunnhumby <i>The Complete Journey</i>): a 24-check data-quality gate, a DuckDB star schema, 13 SQL analyses, difference-in-differences with placebo tests, and a 5-page Power BI report reconciled to SQL.</p>
+          <div class="feat-stats">
+            <div><em>1.46M</em><span>transactions</span></div>
+            <div><em>50.6%</em><span>habitual coupons</span></div>
+            <div><em>225%</em><span>display+mailer lift</span></div>
+            <div><em>58/58</em><span>DAX = SQL</span></div>
+          </div>
+          <ul class="feat-list">
+            <li>Top 10% of households drive <b>34.2%</b> of sales; 318 lapsing regulars hold <b>13.4%</b></li>
+            <li>Placebo checks failed → campaign ROI unmeasurable; recommended a <b>10% random holdout</b></li>
+            <li>SQL-vs-DAX reconciliation caught <b>3 DAX bugs</b> before they reached the report</li>
+          </ul>
+          <div class="stackline"><b>stack:</b> python · duckdb sql · statsmodels · power bi · dax · streamlit · github actions</div>
+        </div>
+        <div class="feat-shots">
+          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" alt="Power BI Executive Overview page" loading="lazy" width="1326" height="746"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_4_promotion_effectiveness.png" alt="Power BI Promotion Effectiveness page" loading="lazy" width="1326" height="746"></a>
+        </div>
+      </article>
       <article class="proj reveal" data-cat="app">
         <div class="ptags"><span>[live] [education] [full-stack]</span><span><a href="https://www.queryscratch.com/" target="_blank" rel="noopener">live ↗</a></span></div>
         <h3>QueryScratch — Learn SQL by Doing</h3>
@@ -370,9 +411,10 @@ footer .ok{display:block;margin-bottom:6px}
     </div>
     <div class="qbar reveal" style="margin-top:36px"><span class="prompt">sumit=#</span> <span class="hl-k">SELECT</span> project, domain, scale, impact <span class="hl-k">FROM</span> portfolio.builds <span class="hl-k">ORDER BY</span> scale <span class="hl-k">DESC</span>;</div>
     <table class="resultset reveal">
-      <caption>(5 rows · 0.018s) — headline numbers, straight from shipped work</caption>
+      <caption>(6 rows · 0.018s) — headline numbers, straight from shipped work</caption>
       <thead><tr><th>project</th><th>domain</th><th>scale</th><th>impact</th></tr></thead>
       <tbody>
+        <tr><td>Grocery Retail Analytics</td><td>retail</td><td>1.46M transactions</td><td class="v">50.6% coupons go to habitual buyers</td></tr>
         <tr><td>Healthcare Fraud Detection</td><td>healthcare</td><td>558K+ claims</td><td class="v">226× fraud concentration</td></tr>
         <tr><td>Mutual Fund Platform</td><td>finance</td><td>9M+ NAV rows</td><td class="v">10,571 funds</td></tr>
         <tr><td>Olist E-Commerce</td><td>e-commerce</td><td>112,650 rows</td><td class="v">40+ DAX measures</td></tr>
@@ -392,6 +434,7 @@ footer .ok{display:block;margin-bottom:6px}
     </div>
     <div class="gitlog">
       <div class="commit reveal"><div><span class="hash">f4a91c2</span><span class="cmsg"><span class="type">now:</span> open to Data Analyst &amp; BI Developer roles</span><span class="head-ref">HEAD → main</span></div><div class="cdesc">Bringing BFSI domain depth and a certified Microsoft data stack to a full-time analytics team.</div></div>
+      <div class="commit reveal"><div><span class="hash">b7e2c4d</span><span class="cmsg"><span class="type">feat:</span> grocery retail analytics — 1.46M transactions</span></div><div class="cdesc">Data-quality gate, DuckDB SQL, difference-in-differences with placebo tests, and a Power BI report reconciled to SQL 58/58.</div></div>
       <div class="commit reveal"><div><span class="hash">8d3e7b1</span><span class="cmsg"><span class="type">feat:</span> end-to-end analytics portfolio shipped</span></div><div class="cdesc">Three complete builds — fraud detection, fund analytics, e-commerce BI. Azure ETL → SQL → Power BI → ML.</div></div>
       <div class="commit reveal"><div><span class="hash">c2a94f0</span><span class="cmsg"><span class="type">cert:</span> PL-300 · AZ-900 · DP-900 · AWS CCP · CFA-IF</span></div><div class="cdesc">Microsoft data stack, AWS, and CFA Institute investment foundations — validated ×5.</div></div>
       <div class="commit reveal"><div><span class="hash">7b1d3a9</span><span class="cmsg"><span class="type">job:</span> Business Data Analyst · Financial Services</span></div><div class="cdesc">Analytics, dashboards, and n8n automation for a working financial-services business.</div></div>
@@ -455,6 +498,7 @@ footer .ok{display:block;margin-bottom:6px}
       <button class="pal-item" data-go="#contact"><span class="pi">→</span>contact.json</button>
       <button class="pal-item" data-act="resume"><span class="pi">↓</span>download resume.pdf</button>
       <button class="pal-item" data-act="email"><span class="pi">⧉</span>copy email address</button>
+      <button class="pal-item" data-act="grocery"><span class="pi">↗</span>open grocery analytics app</button>
       <button class="pal-item" data-act="queryscratch"><span class="pi">↗</span>open queryscratch.com</button>
       <button class="pal-item" data-act="github"><span class="pi">↗</span>open github profile</button>
       <button class="pal-item" data-act="linkedin"><span class="pi">↗</span>open linkedin profile</button>
@@ -566,11 +610,12 @@ function runItem(it){
   closePal();
   var go = it.getAttribute("data-go"), act = it.getAttribute("data-act");
   if (go){ var el = document.querySelector(go); if (el) el.scrollIntoView({behavior: reduced ? "auto" : "smooth"}); }
-  else if (act === "resume"){ var a = document.createElement("a"); a.href = "Sumit_Prajapat_Resume.pdf"; a.download = ""; document.body.appendChild(a); a.click(); a.remove(); }
+  else if (act === "resume"){ var a = document.createElement("a"); a.href = "Sumit_Prajapat_Data_Analyst.pdf"; a.download = ""; document.body.appendChild(a); a.click(); a.remove(); }
   else if (act === "email"){
     if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(EMAIL); }
     it.querySelector(".pi").textContent = "✓";
   }
+  else if (act === "grocery"){ window.open("https://grocery-retail-analytics-gej2xcqxwhwypm7lvjhher.streamlit.app/", "_blank", "noopener"); }
   else if (act === "queryscratch"){ window.open("https://www.queryscratch.com/", "_blank", "noopener"); }
   else if (act === "github"){ window.open("https://github.com/Skpkush", "_blank", "noopener"); }
   else if (act === "linkedin"){ window.open("https://www.linkedin.com/in/sumit-k-prajapat/", "_blank", "noopener"); }
