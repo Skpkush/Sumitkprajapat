@@ -47,14 +47,20 @@ No framework, no build step — one hand-written `index.html`.
 
 ### Featured projects
 
-| # | project | headline |
-| :-- | :-- | :-- |
-| 01 | [Grocery Retail Analytics](https://github.com/Skpkush/grocery-retail-analytics) | 1.46M transactions → **50.6% of coupons go to habitual buyers** |
-| 02 | [Healthcare Provider Fraud Detection](https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics) | 558K claims → **226× fraud concentration** |
-| 03 | [Mutual Fund Analytics Platform](https://github.com/Skpkush/mf-analytics-platform) | **9M+ NAV rows** · 10,571 funds |
-| 04 | [Olist E-Commerce Analytics](https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard) | 112,650 rows · **40+ DAX measures** |
-| 05 | [QueryScratch](https://www.queryscratch.com/) | **500 SQL questions** + in-browser sandbox |
-| 06 | [Customer Segmentation](https://github.com/Skpkush/Customer-Segmentation) | RFM + KMeans · live Streamlit app |
+<table>
+  <tr>
+    <td width="50%" valign="top"><a href="https://github.com/Skpkush/grocery-retail-analytics"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" width="100%" alt="Grocery Retail Analytics"/></a><br/><b><a href="https://github.com/Skpkush/grocery-retail-analytics">Grocery Retail Analytics</a></b><br/><sub>1.46M transactions → <b>50.6% of coupons go to habitual buyers</b></sub></td>
+    <td width="50%" valign="top"><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics"><img src="https://raw.githubusercontent.com/Skpkush/Healthcare-Insurance-Claims-Analytics/v2-real-data/dashboard/Executive%20command%20center.png" width="100%" alt="Healthcare Provider Fraud Detection"/></a><br/><b><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics">Healthcare Provider Fraud Detection</a></b><br/><sub>558K claims → <b>226× fraud concentration</b> · 90.1% recall</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="https://github.com/Skpkush/mf-analytics-platform"><img src="https://raw.githubusercontent.com/Skpkush/mf-analytics-platform/main/docs/screenshots/page1_executive.png" width="100%" alt="Mutual Fund Analytics Platform"/></a><br/><b><a href="https://github.com/Skpkush/mf-analytics-platform">Mutual Fund Analytics Platform</a></b><br/><sub><b>14,384 schemes</b> · 51 AMCs · Prophet NAV forecasts</sub></td>
+    <td width="50%" valign="top"><a href="https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard"><img src="https://raw.githubusercontent.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard/main/Images/page1_sales_intelligence.png" width="100%" alt="Olist E-Commerce Analytics"/></a><br/><b><a href="https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard">Olist E-Commerce Analytics</a></b><br/><sub>112,650 rows → <b>~97% one-time buyers</b> · 40+ DAX</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="https://github.com/Skpkush/Customer-Segmentation"><img src="https://raw.githubusercontent.com/Skpkush/Customer-Segmentation/main/images/rfm_segments.png" width="100%" alt="Customer Segmentation"/></a><br/><b><a href="https://github.com/Skpkush/Customer-Segmentation">Customer Segmentation</a></b><br/><sub>RFM + K-Means · <b>Silhouette 0.52</b> · live app</sub></td>
+    <td width="50%" valign="top"><a href="https://www.queryscratch.com/"><img src="assets/queryscratch.png" width="100%" alt="QueryScratch"/></a><br/><b><a href="https://www.queryscratch.com/">QueryScratch</a></b><br/><sub><b>500 SQL challenges</b> · in-browser sandbox</sub></td>
+  </tr>
+</table>
 
 ---
 
@@ -81,6 +87,7 @@ python -m http.server 8000
 ```
 index.html                        # the entire site (HTML + CSS + JS)
 Sumit_Prajapat_Data_Analyst.pdf   # downloadable resume
+assets/queryscratch.png           # project screenshot
 ```
 
 <div align="center">

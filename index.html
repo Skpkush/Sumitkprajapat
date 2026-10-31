@@ -163,6 +163,8 @@ nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,
 .feat-shot{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--wash)}
 .feat-shot img{display:block;width:100%;height:auto;transition:transform .35s}
 .proj.feat:hover .feat-shot img{transform:scale(1.02)}
+.proj.feat:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
+.proj.feat:nth-child(even) .feat-shots{order:-1}
 .feat-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:2px}
 .feat-stats div{border:1px solid var(--line);border-radius:8px;padding:9px 10px;background:var(--bg)}
 .feat-stats em{display:block;font-style:normal;font-family:var(--mono);font-weight:800;font-size:17px;color:var(--accent)}
@@ -170,7 +172,7 @@ nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,
 .proj .feat-list{list-style:none;color:var(--grey);font-size:14px;display:flex;flex-direction:column;gap:5px}
 .proj .feat-list li::before{content:"▸ ";color:var(--accent);font-family:var(--mono)}
 .proj .feat-list b{color:var(--ink);font-family:var(--mono);font-weight:500;font-size:13px}
-@media (max-width:880px){.proj.feat{grid-template-columns:1fr}.feat-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:880px){.proj.feat,.proj.feat:nth-child(even){grid-template-columns:1fr}.proj.feat:nth-child(even) .feat-shots{order:0}.feat-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* ---- services ---- */
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:34px}
@@ -310,7 +312,7 @@ footer .ok{display:block;margin-bottom:6px}
     <ul class="whoami">
       <li>Analysed <b>1.46M real grocery transactions</b> — found <b>50.6% of coupon redemptions</b> go to shoppers already buying, and reconciled a Power BI report to SQL <b>58/58</b></li>
       <li>Engineered a fraud model across <b>558K Medicare claims</b> — surfaced a <b>226× fraud concentration</b> the eye would&#8217;ve missed</li>
-      <li>Built a platform processing <b>9M+ NAV rows</b> across <b>10,571 funds</b>, with ML forecasting</li>
+      <li>Built a fund analytics platform covering <b>14,384 schemes</b> across <b>51 AMCs</b>, with Prophet NAV forecasting</li>
       <li>Modeled <b>112K e-commerce orders</b> into a Power BI warehouse with <b>40+ DAX measures</b></li>
       <li>Shipped <b>QueryScratch</b> — <b>500 SQL practice questions</b> and a browser-native query sandbox, free for students</li>
     </ul>
@@ -358,8 +360,8 @@ footer .ok{display:block;margin-bottom:6px}
         <div class="feat-body">
           <div class="ptags"><span>[new] [retail] [causal-stats]</span><span><a href="https://grocery-retail-analytics-gej2xcqxwhwypm7lvjhher.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener">github ↗</a></span></div>
           <span class="feat-badge">★ latest build</span>
-          <h3>Grocery Retail Analytics — Does Promo Spend Work?</h3>
-          <p>1.46M real transactions from 2,469 households (dunnhumby <i>The Complete Journey</i>): a 24-check data-quality gate, a DuckDB star schema, 13 SQL analyses, difference-in-differences with placebo tests, and a 5-page Power BI report reconciled to SQL.</p>
+          <h3>Grocery Retail Analytics</h3>
+          <p>24-check data-quality gate → DuckDB star schema → 13 SQL analyses → difference-in-differences with placebo tests → 5-page Power BI report (44 DAX measures) + Streamlit app with a cite-or-refuse “ask the data” assistant.</p>
           <div class="feat-stats">
             <div><em>1.46M</em><span>transactions</span></div>
             <div><em>50.6%</em><span>habitual coupons</span></div>
@@ -374,39 +376,123 @@ footer .ok{display:block;margin-bottom:6px}
           <div class="stackline"><b>stack:</b> python · duckdb sql · statsmodels · power bi · dax · streamlit · github actions</div>
         </div>
         <div class="feat-shots">
-          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" alt="Power BI Executive Overview page" loading="lazy" width="1326" height="746"></a>
-          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_4_promotion_effectiveness.png" alt="Power BI Promotion Effectiveness page" loading="lazy" width="1326" height="746"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" alt="Grocery Retail Analytics — Power BI Executive Overview" loading="lazy" width="1326" height="746"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_4_promotion_effectiveness.png" alt="Grocery Retail Analytics — Power BI Promotion Effectiveness" loading="lazy" width="1326" height="746"></a>
         </div>
       </article>
-      <article class="proj reveal" data-cat="app">
-        <div class="ptags"><span>[live] [education] [full-stack]</span><span><a href="https://www.queryscratch.com/" target="_blank" rel="noopener">live ↗</a></span></div>
-        <h3>QueryScratch — Learn SQL by Doing</h3>
-        <p>A free SQL learning platform for students: <b>500 practice questions</b> and an in-browser SQL sandbox that runs real queries client-side via <b>sql.js / WebAssembly</b> — no install, no server round-trip. Streak tracking and per-user progress on Supabase auth.</p>
-        <div class="stackline"><b>stack:</b> sql · sql.js · webassembly · supabase · full-stack web</div>
+      <article class="proj feat reveal" data-cat="ml bi">
+        <div class="feat-body">
+          <div class="ptags"><span>[ml] [azure] [healthcare]</span><span><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics" target="_blank" rel="noopener">github ↗</a></span></div>
+          <h3>Healthcare Provider Fraud Detection</h3>
+          <p>Azure Blob → Data Factory → PostgreSQL 9-table warehouse (2.43M rows) → scikit-learn fraud model (AUC 0.9573) → 4-page Power BI report with provider drill-through.</p>
+          <div class="feat-stats">
+            <div><em>558K</em><span>claims</span></div>
+            <div><em>226×</em><span>fraud concentration</span></div>
+            <div><em>90.1%</em><span>fraud recall</span></div>
+            <div><em>$295.7M</em><span>exposure flagged</span></div>
+          </div>
+          <ul class="feat-list">
+            <li>Top billing quartile: <b>34.02%</b> fraud rate vs <b>0.15%</b> in the bottom quartile</li>
+            <li><b>96%</b> of high-velocity providers (&gt;10 claims/day) are fraud-flagged</li>
+            <li>Fraud providers file 9+ diagnosis codes <b>1.66×</b> as often — diagnosis stuffing</li>
+          </ul>
+          <div class="stackline"><b>stack:</b> azure adf · postgresql · python · scikit-learn · power bi · dax</div>
+        </div>
+        <div class="feat-shots">
+          <a class="feat-shot" href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/Healthcare-Insurance-Claims-Analytics/v2-real-data/dashboard/Executive%20command%20center.png" alt="Healthcare Fraud Detection — Power BI Executive Overview" loading="lazy" width="1877" height="898"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/Healthcare-Insurance-Claims-Analytics/v2-real-data/dashboard/Fraud%20Dectection.png" alt="Healthcare Fraud Detection — Power BI Fraud Detection page" loading="lazy" width="1810" height="906"></a>
+        </div>
       </article>
-      <article class="proj reveal" data-cat="ml bi">
-        <div class="ptags"><span>[ml] [azure] [bfsi]</span><span><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics" target="_blank" rel="noopener">github ↗</a></span></div>
-        <h3>Healthcare Provider Fraud Detection</h3>
-        <p>Fraud analytics across <b>558K+ Medicare claims</b>: an Azure Data Factory pipeline into PostgreSQL, a scikit-learn fraud-detection model, and a Power BI dashboard for investigating flagged providers.</p>
-        <div class="stackline"><b>stack:</b> python · scikit-learn · azure adf · postgresql · power bi</div>
+      <article class="proj feat reveal" data-cat="bi ml app">
+        <div class="feat-body">
+          <div class="ptags"><span>[live] [finance] [forecasting]</span><span><a href="https://mf-analytics-platform-nmndaxxuzmzhckvswpue3h.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener">github ↗</a></span></div>
+          <h3>Mutual Fund Analytics Platform</h3>
+          <p>Yahoo Finance + AMFI → Azure Blob → Data Factory → Azure SQL star schema → risk suite in Python → Prophet NAV forecasts → 4-page Power BI report and a live Streamlit app.</p>
+          <div class="feat-stats">
+            <div><em>14,384</em><span>fund schemes</span></div>
+            <div><em>51</em><span>AMCs</span></div>
+            <div><em>5 + 4</em><span>dim + fact tables</span></div>
+            <div><em>25+</em><span>DAX measures</span></div>
+          </div>
+          <ul class="feat-list">
+            <li>Full risk suite: <b>Sharpe, Sortino, Treynor</b>, alpha/beta and max drawdown</li>
+            <li><b>30/60/90-day</b> Prophet NAV forecasts with confidence bands</li>
+            <li>Azure Data Factory pipeline running end to end into a <b>star schema</b></li>
+          </ul>
+          <div class="stackline"><b>stack:</b> azure adf · azure sql · python · prophet · power bi · streamlit</div>
+        </div>
+        <div class="feat-shots">
+          <a class="feat-shot" href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/mf-analytics-platform/main/docs/screenshots/page1_executive.png" alt="Mutual Fund Platform — Power BI Executive Overview" loading="lazy" width="1157" height="736"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/mf-analytics-platform/main/docs/screenshots/page4_risk.png" alt="Mutual Fund Platform — Power BI Risk & Volatility page" loading="lazy" width="1177" height="745"></a>
+        </div>
       </article>
-      <article class="proj reveal" data-cat="bi ml app">
-        <div class="ptags"><span>[live] [finance]</span><span><a href="https://mf-analytics-platform-nmndaxxuzmzhckvswpue3h.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener">github ↗</a></span></div>
-        <h3>Mutual Fund Analytics Platform</h3>
-        <p>A live platform on Yahoo Finance + AMFI data: automated ETL, <b>Prophet</b> return forecasting, and fund performance &amp; risk dashboards — deployed as a Streamlit app.</p>
-        <div class="stackline"><b>stack:</b> python · streamlit · prophet · azure · postgresql · power bi</div>
+      <article class="proj feat reveal" data-cat="bi">
+        <div class="feat-body">
+          <div class="ptags"><span>[warehouse] [bi] [e-commerce]</span><span><a href="https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard" target="_blank" rel="noopener">github ↗</a></span></div>
+          <h3>Olist E-Commerce Analytics</h3>
+          <p>8 raw tables → Azure Blob → Data Factory → Azure PostgreSQL star schema (4 dims + 1 fact) → 3-page Power BI report with decomposition tree, key influencers and what-if price simulation.</p>
+          <div class="feat-stats">
+            <div><em>112,650</em><span>sales records</span></div>
+            <div><em>~97%</em><span>one-time buyers</span></div>
+            <div><em>91.88%</em><span>on-time delivery</span></div>
+            <div><em>40+</em><span>DAX measures</span></div>
+          </div>
+          <ul class="feat-list">
+            <li>Retention measured on <b>customer_unique_id</b> — only ~3% of real customers ever reorder</li>
+            <li>São Paulo drives <b>38.3%</b> of revenue; <b>health_beauty</b> leads at R$1.4M</li>
+            <li>Remote AP state waits <b>28 days</b> vs a 21-day average delivery</li>
+          </ul>
+          <div class="stackline"><b>stack:</b> azure adf · postgresql · sql · power bi · dax · power query</div>
+        </div>
+        <div class="feat-shots">
+          <a class="feat-shot" href="https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard/main/Images/page1_sales_intelligence.png" alt="Olist E-Commerce — Power BI Sales Intelligence page" loading="lazy" width="1132" height="651"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard/main/Images/page3_delivery_operations.png" alt="Olist E-Commerce — Power BI Delivery & Operations page" loading="lazy" width="1130" height="656"></a>
+        </div>
       </article>
-      <article class="proj reveal" data-cat="bi">
-        <div class="ptags"><span>[warehouse] [bi]</span><span><a href="https://github.com/Skpkush/Olist-E-Commerce-Analytics-Dashboard" target="_blank" rel="noopener">github ↗</a></span></div>
-        <h3>Olist E-Commerce Analytics</h3>
-        <p>Star-schema warehouse (<b>4 dims + 1 fact, 112,650 rows</b>) fed by Azure Blob → ADF → PostgreSQL, with a Power BI report carrying <b>40+ DAX measures</b>, AI visuals, and what-if pricing simulation.</p>
-        <div class="stackline"><b>stack:</b> sql · postgresql · azure · power bi · dax</div>
+      <article class="proj feat reveal" data-cat="ml app">
+        <div class="feat-body">
+          <div class="ptags"><span>[live] [ml] [segmentation]</span><span><a href="https://customer-segmentation-g4vjra3jvttxstxguxhnff.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/Customer-Segmentation" target="_blank" rel="noopener">github ↗</a></span></div>
+          <h3>Customer Segmentation Engine</h3>
+          <p>UCI Online Retail data → cleaning → RFM scoring → K-Means vs Hierarchical vs DBSCAN benchmarked head-to-head → PCA, CLV and cohort analysis → interactive Streamlit app.</p>
+          <div class="feat-stats">
+            <div><em>541K</em><span>transactions</span></div>
+            <div><em>0.52</em><span>silhouette score</span></div>
+            <div><em>~40%</em><span>revenue from top 15%</span></div>
+            <div><em>£127K</em><span>recoverable revenue</span></div>
+          </div>
+          <ul class="feat-list">
+            <li>Champions are <b>8×</b> the lifetime value of lost customers</li>
+            <li>Cohorts lose <b>70%+</b> of customers by month 3 — the window to act</li>
+            <li>K-Means (K=4) beat Hierarchical and DBSCAN on <b>compact, explainable</b> clusters</li>
+          </ul>
+          <div class="stackline"><b>stack:</b> python · pandas · scikit-learn · pca · streamlit</div>
+        </div>
+        <div class="feat-shots">
+          <a class="feat-shot" href="https://github.com/Skpkush/Customer-Segmentation" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/Customer-Segmentation/main/images/rfm_segments.png" alt="Customer Segmentation — Customer count and revenue by RFM segment" loading="lazy" width="1799" height="707"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/Customer-Segmentation" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/Customer-Segmentation/main/images/cluster_2d_scatter.png" alt="Customer Segmentation — K-Means cluster scatter plots" loading="lazy" width="2148" height="594"></a>
+        </div>
       </article>
-      <article class="proj reveal" data-cat="ml app">
-        <div class="ptags"><span>[ml] [segmentation]</span><span><a href="https://customer-segmentation-g4vjra3jvttxstxguxhnff.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/Customer-Segmentation" target="_blank" rel="noopener">github ↗</a></span></div>
-        <h3>Customer Segmentation</h3>
-        <p>RFM scoring + <b>KMeans</b> clustering on transaction data, shipped as an interactive Streamlit app for exploring customer segments and targeting.</p>
-        <div class="stackline"><b>stack:</b> python · kmeans · rfm · streamlit</div>
+      <article class="proj feat reveal" data-cat="app">
+        <div class="feat-body">
+          <div class="ptags"><span>[live] [education] [full-stack]</span><span><a href="https://www.queryscratch.com/" target="_blank" rel="noopener">live ↗</a></span></div>
+          <h3>QueryScratch — Learn SQL by Doing</h3>
+          <p>A free SQL learning platform: hand-crafted challenges from a first SELECT to recursive CTEs, with real queries run client-side via sql.js / WebAssembly and instant exact-output feedback.</p>
+          <div class="feat-stats">
+            <div><em>500</em><span>SQL challenges</span></div>
+            <div><em>0</em><span>installs needed</span></div>
+            <div><em>WASM</em><span>in-browser engine</span></div>
+            <div><em>Free</em><span>for students</span></div>
+          </div>
+          <ul class="feat-list">
+            <li>No server round-trip — every query runs <b>inside the browser</b></li>
+            <li>Learn, playground, mock-interview and practice tracks, <b>beginner → expert</b></li>
+            <li>Streaks and per-user progress on <b>Supabase</b> auth</li>
+          </ul>
+          <div class="stackline"><b>stack:</b> sql · sql.js · webassembly · supabase · javascript</div>
+        </div>
+        <div class="feat-shots">
+          <a class="feat-shot" href="https://www.queryscratch.com/" target="_blank" rel="noopener"><img src="assets/queryscratch.png" alt="QueryScratch — QueryScratch home page" loading="lazy" width="1400" height="640"></a>
+        </div>
       </article>
     </div>
     <div class="qbar reveal" style="margin-top:36px"><span class="prompt">sumit=#</span> <span class="hl-k">SELECT</span> project, domain, scale, impact <span class="hl-k">FROM</span> portfolio.builds <span class="hl-k">ORDER BY</span> scale <span class="hl-k">DESC</span>;</div>
@@ -416,7 +502,7 @@ footer .ok{display:block;margin-bottom:6px}
       <tbody>
         <tr><td>Grocery Retail Analytics</td><td>retail</td><td>1.46M transactions</td><td class="v">50.6% coupons go to habitual buyers</td></tr>
         <tr><td>Healthcare Fraud Detection</td><td>healthcare</td><td>558K+ claims</td><td class="v">226× fraud concentration</td></tr>
-        <tr><td>Mutual Fund Platform</td><td>finance</td><td>9M+ NAV rows</td><td class="v">10,571 funds</td></tr>
+        <tr><td>Mutual Fund Platform</td><td>finance</td><td>14,384 schemes</td><td class="v">51 AMCs on one risk framework</td></tr>
         <tr><td>Olist E-Commerce</td><td>e-commerce</td><td>112,650 rows</td><td class="v">40+ DAX measures</td></tr>
         <tr><td>QueryScratch</td><td>education</td><td>500 questions</td><td class="v">free SQL sandbox for students</td></tr>
         <tr><td>Customer Segmentation</td><td>retail</td><td>RFM + KMeans</td><td class="v">live Streamlit app</td></tr>
