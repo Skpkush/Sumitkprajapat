@@ -1,6 +1,6 @@
 <div align="center">
 
-# `sumit=#` Sumit Prajapat — Portfolio
+# `sumit=#` Sumit Kumar Prajapat — Portfolio
 
 **Data Analyst · BI Developer · PL-300 Certified**
 
