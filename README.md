@@ -25,11 +25,11 @@ No framework, no build step — one hand-written `index.html`.
 > **Does a grocer's promotional spend actually change behaviour?**
 > 1.46M real transactions · 2,469 households · a full year of dunnhumby *The Complete Journey* data.
 
-| 1.46M | 50.6% | 225% | 58 / 58 |
+| 1.46M | 50.6% | 102 + 6 | 58 / 58 |
 | :---: | :---: | :---: | :---: |
-| transactions cleaned & modelled | coupon redemptions going to shoppers already buying | sales lift when display + mailer run together | Power BI values reconciled to SQL |
+| transactions modelled in dbt | coupon redemptions going to shoppers already buying | dbt data tests + unit tests, run in CI | Power BI values reconciled to SQL |
 
-24-check data-quality gate → DuckDB star schema → 13 SQL analyses → difference-in-differences with placebo tests → 5-page Power BI report + Streamlit app.
+dbt project on DuckDB (28 models, staging → intermediate → marts, incremental fact tables) → 13 SQL analyses → difference-in-differences with placebo tests → 5-page Power BI report (45 DAX measures) + Streamlit app. `dbt build` runs on every push.
 
 [`→ repo`](https://github.com/Skpkush/grocery-retail-analytics) &nbsp;·&nbsp; [`🟢 live app`](https://grocery-retail-analytics-gej2xcqxwhwypm7lvjhher.streamlit.app/)
 
@@ -49,7 +49,7 @@ No framework, no build step — one hand-written `index.html`.
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="https://github.com/Skpkush/grocery-retail-analytics"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" width="100%" alt="Grocery Retail Analytics"/></a><br/><b><a href="https://github.com/Skpkush/grocery-retail-analytics">Grocery Retail Analytics</a></b><br/><sub>1.46M transactions → <b>50.6% of coupons go to habitual buyers</b></sub></td>
+    <td width="50%" valign="top"><a href="https://github.com/Skpkush/grocery-retail-analytics"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" width="100%" alt="Grocery Retail Analytics"/></a><br/><b><a href="https://github.com/Skpkush/grocery-retail-analytics">Grocery Retail Analytics</a></b><br/><sub>dbt · 1.46M transactions → <b>50.6% of coupons go to habitual buyers</b></sub></td>
     <td width="50%" valign="top"><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics"><img src="https://raw.githubusercontent.com/Skpkush/Healthcare-Insurance-Claims-Analytics/v2-real-data/dashboard/Executive%20command%20center.png" width="100%" alt="Healthcare Provider Fraud Detection"/></a><br/><b><a href="https://github.com/Skpkush/Healthcare-Insurance-Claims-Analytics">Healthcare Provider Fraud Detection</a></b><br/><sub>558K claims → <b>226× fraud concentration</b> · 90.1% recall</sub></td>
   </tr>
   <tr>

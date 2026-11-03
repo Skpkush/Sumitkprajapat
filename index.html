@@ -310,7 +310,7 @@ footer .ok{display:block;margin-bottom:6px}
     <h2 class="h2">$ whoami</h2>
     <p class="lead">I turn raw data into decisions a business can act on — end to end, no handoffs. Five industries, six production-grade builds.</p>
     <ul class="whoami">
-      <li>Analysed <b>1.46M real grocery transactions</b> — found <b>50.6% of coupon redemptions</b> go to shoppers already buying, and reconciled a Power BI report to SQL <b>58/58</b></li>
+      <li>Analysed <b>1.46M real grocery transactions</b> into a tested <b>dbt</b> star schema (102 data tests) — found <b>50.6% of coupon redemptions</b> go to shoppers already buying, and reconciled a Power BI report to SQL <b>58/58</b></li>
       <li>Engineered a fraud model across <b>558K Medicare claims</b> — surfaced a <b>226× fraud concentration</b> the eye would&#8217;ve missed</li>
       <li>Built a fund analytics platform covering <b>14,384 schemes</b> across <b>51 AMCs</b>, with Prophet NAV forecasting</li>
       <li>Modeled <b>112K e-commerce orders</b> into a Power BI warehouse with <b>40+ DAX measures</b></li>
@@ -330,7 +330,7 @@ footer .ok{display:block;margin-bottom:6px}
     </div>
     <div class="cfg reveal">
       <div class="cfg-row"><div class="cfg-key">analytics_bi<i>:</i></div><div class="tokens"><span class="tok">Power BI</span><span class="tok">DAX</span><span class="tok">Power Query</span><span class="tok">Data Modeling</span><span class="tok">Data Visualization</span><span class="tok">Excel</span></div></div>
-      <div class="cfg-row"><div class="cfg-key">sql_and_etl<i>:</i></div><div class="tokens"><span class="tok">SQL</span><span class="tok">PostgreSQL</span><span class="tok">DuckDB</span><span class="tok">Azure Data Factory</span><span class="tok">ETL Pipelines</span><span class="tok">Data Warehousing</span></div></div>
+      <div class="cfg-row"><div class="cfg-key">sql_and_etl<i>:</i></div><div class="tokens"><span class="tok">SQL</span><span class="tok">PostgreSQL</span><span class="tok">dbt</span><span class="tok">DuckDB</span><span class="tok">Azure Data Factory</span><span class="tok">ETL Pipelines</span><span class="tok">Data Warehousing</span></div></div>
       <div class="cfg-row"><div class="cfg-key">programming<i>:</i></div><div class="tokens"><span class="tok">Python</span><span class="tok">Pandas</span><span class="tok">NumPy</span><span class="tok">scikit-learn</span><span class="tok">Streamlit</span></div></div>
       <div class="cfg-row"><div class="cfg-key">cloud<i>:</i></div><div class="tokens"><span class="tok">Microsoft Azure</span><span class="tok">AWS</span></div></div>
       <div class="cfg-row"><div class="cfg-key">machine_learning<i>:</i></div><div class="tokens"><span class="tok">Forecasting · Prophet</span><span class="tok">Classification</span><span class="tok">Clustering · KMeans</span><span class="tok">RFM Analysis</span><span class="tok">Causal Inference · DiD</span><span class="tok">Hypothesis Testing</span></div></div>
@@ -358,26 +358,26 @@ footer .ok{display:block;margin-bottom:6px}
     <div class="proj-grid">
       <article class="proj feat reveal" data-cat="bi ml app">
         <div class="feat-body">
-          <div class="ptags"><span>[new] [retail] [causal-stats]</span><span><a href="https://grocery-retail-analytics-gej2xcqxwhwypm7lvjhher.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener">github ↗</a></span></div>
+          <div class="ptags"><span>[new] [retail] [dbt] [causal-stats]</span><span><a href="https://grocery-retail-analytics-gej2xcqxwhwypm7lvjhher.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener">github ↗</a></span></div>
           <span class="feat-badge">★ latest build</span>
           <h3>Grocery Retail Analytics</h3>
-          <p>24-check data-quality gate → DuckDB star schema → 13 SQL analyses → difference-in-differences with placebo tests → 5-page Power BI report (44 DAX measures) + Streamlit app with a cite-or-refuse “ask the data” assistant.</p>
+          <p>dbt project on DuckDB: 28 models (staging → intermediate → marts), 102 data tests + 6 unit tests, incremental fact tables and CI on every push → 13 SQL analyses → difference-in-differences with placebo tests → 5-page Power BI report (45 DAX measures) + Streamlit app with a cite-or-refuse “ask the data” assistant.</p>
           <div class="feat-stats">
             <div><em>1.46M</em><span>transactions</span></div>
             <div><em>50.6%</em><span>habitual coupons</span></div>
-            <div><em>225%</em><span>display+mailer lift</span></div>
+            <div><em>102</em><span>dbt data tests</span></div>
             <div><em>58/58</em><span>DAX = SQL</span></div>
           </div>
           <ul class="feat-list">
             <li>Top 10% of households drive <b>34.2%</b> of sales; 318 lapsing regulars hold <b>13.4%</b></li>
-            <li>Placebo checks failed → campaign ROI unmeasurable; recommended a <b>10% random holdout</b></li>
-            <li>SQL-vs-DAX reconciliation caught <b>3 DAX bugs</b> before they reached the report</li>
+            <li>Display + mailer linked to <b>225%</b> higher sales; placebo checks failed → recommended a <b>10% random holdout</b></li>
+            <li>Moved to dbt with every table checked row by row against the old pipeline; SQL-vs-DAX reconciliation caught <b>3 DAX bugs</b></li>
           </ul>
-          <div class="stackline"><b>stack:</b> python · duckdb sql · statsmodels · power bi · dax · streamlit · github actions</div>
+          <div class="stackline"><b>stack:</b> dbt · duckdb · sql · python · statsmodels · power bi · dax · streamlit · github actions</div>
         </div>
         <div class="feat-shots">
           <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_1_executive_overview.png" alt="Grocery Retail Analytics — Power BI Executive Overview" loading="lazy" width="1326" height="746"></a>
-          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/powerbi_4_promotion_effectiveness.png" alt="Grocery Retail Analytics — Power BI Promotion Effectiveness" loading="lazy" width="1326" height="746"></a>
+          <a class="feat-shot" href="https://github.com/Skpkush/grocery-retail-analytics" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Skpkush/grocery-retail-analytics/main/docs/images/dbt_lineage.png" alt="Grocery Retail Analytics — dbt lineage graph from sources to the Power BI report" loading="lazy" width="2160" height="1084"></a>
         </div>
       </article>
       <article class="proj feat reveal" data-cat="ml bi">
@@ -520,7 +520,7 @@ footer .ok{display:block;margin-bottom:6px}
     </div>
     <div class="gitlog">
       <div class="commit reveal"><div><span class="hash">f4a91c2</span><span class="cmsg"><span class="type">now:</span> open to Data Analyst &amp; BI Developer roles</span><span class="head-ref">HEAD → main</span></div><div class="cdesc">Bringing BFSI domain depth and a certified Microsoft data stack to a full-time analytics team.</div></div>
-      <div class="commit reveal"><div><span class="hash">b7e2c4d</span><span class="cmsg"><span class="type">feat:</span> grocery retail analytics — 1.46M transactions</span></div><div class="cdesc">Data-quality gate, DuckDB SQL, difference-in-differences with placebo tests, and a Power BI report reconciled to SQL 58/58.</div></div>
+      <div class="commit reveal"><div><span class="hash">b7e2c4d</span><span class="cmsg"><span class="type">feat:</span> grocery retail analytics — 1.46M transactions</span></div><div class="cdesc">dbt project on DuckDB with 102 data tests and CI, difference-in-differences with placebo tests, and a Power BI report reconciled to SQL 58/58.</div></div>
       <div class="commit reveal"><div><span class="hash">8d3e7b1</span><span class="cmsg"><span class="type">feat:</span> end-to-end analytics portfolio shipped</span></div><div class="cdesc">Three complete builds — fraud detection, fund analytics, e-commerce BI. Azure ETL → SQL → Power BI → ML.</div></div>
       <div class="commit reveal"><div><span class="hash">c2a94f0</span><span class="cmsg"><span class="type">cert:</span> PL-300 · AZ-900 · DP-900 · AWS CCP · CFA-IF</span></div><div class="cdesc">Microsoft data stack, AWS, and CFA Institute investment foundations — validated ×5.</div></div>
       <div class="commit reveal"><div><span class="hash">7b1d3a9</span><span class="cmsg"><span class="type">job:</span> Business Data Analyst · Financial Services</span></div><div class="cdesc">Analytics, dashboards, and n8n automation for a working financial-services business.</div></div>
