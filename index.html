@@ -389,10 +389,12 @@ footer .ok{display:block;margin-bottom:6px}
             <div><em>558K</em><span>claims</span></div>
             <div><em>226×</em><span>fraud concentration</span></div>
             <div><em>90.1%</em><span>fraud recall</span></div>
-            <div><em>$295.7M</em><span>exposure flagged</span></div>
+            <div><em>$295.7M</em><span>at 506 flagged providers</span></div>
           </div>
           <ul class="feat-list">
             <li>Top billing quartile: <b>34.02%</b> fraud rate vs <b>0.15%</b> in the bottom quartile</li>
+            <li>Audit list: top <b>50</b> providers (0.9%) cover <b>35.3%</b> of flagged dollars, and all 50 are flagged</li>
+            <li>Threshold tuning lifted XGBoost recall from <b>65%</b> to <b>93%</b>, at the cost of a larger review queue</li>
             <li><b>96%</b> of high-velocity providers (&gt;10 claims/day) are fraud-flagged</li>
             <li>Fraud providers file 9+ diagnosis codes <b>1.66×</b> as often — diagnosis stuffing</li>
           </ul>
