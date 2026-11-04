@@ -312,7 +312,7 @@ footer .ok{display:block;margin-bottom:6px}
     <ul class="whoami">
       <li>Analysed <b>1.46M real grocery transactions</b> into a tested <b>dbt</b> star schema (102 data tests) — found <b>50.6% of coupon redemptions</b> go to shoppers already buying, and reconciled a Power BI report to SQL <b>58/58</b></li>
       <li>Engineered a fraud model across <b>558K Medicare claims</b> — surfaced a <b>226× fraud concentration</b> the eye would&#8217;ve missed</li>
-      <li>Built a fund analytics platform covering <b>14,384 schemes</b> across <b>51 AMCs</b>, with Prophet NAV forecasting</li>
+      <li>Built a fund analytics platform covering <b>8,620 live schemes</b> and <b>9.7M daily NAVs</b>, then tested which <b>5 funds</b> suit a moderate-risk client</li>
       <li>Modeled <b>112K e-commerce orders</b> into a Power BI warehouse with <b>40+ DAX measures</b></li>
       <li>Shipped <b>QueryScratch</b> — <b>500 SQL practice questions</b> and a browser-native query sandbox, free for students</li>
     </ul>
@@ -333,7 +333,7 @@ footer .ok{display:block;margin-bottom:6px}
       <div class="cfg-row"><div class="cfg-key">sql_and_etl<i>:</i></div><div class="tokens"><span class="tok">SQL</span><span class="tok">PostgreSQL</span><span class="tok">dbt</span><span class="tok">DuckDB</span><span class="tok">Azure Data Factory</span><span class="tok">ETL Pipelines</span><span class="tok">Data Warehousing</span></div></div>
       <div class="cfg-row"><div class="cfg-key">programming<i>:</i></div><div class="tokens"><span class="tok">Python</span><span class="tok">Pandas</span><span class="tok">NumPy</span><span class="tok">scikit-learn</span><span class="tok">Streamlit</span></div></div>
       <div class="cfg-row"><div class="cfg-key">cloud<i>:</i></div><div class="tokens"><span class="tok">Microsoft Azure</span><span class="tok">AWS</span></div></div>
-      <div class="cfg-row"><div class="cfg-key">machine_learning<i>:</i></div><div class="tokens"><span class="tok">Forecasting · Prophet</span><span class="tok">Classification</span><span class="tok">Clustering · KMeans</span><span class="tok">RFM Analysis</span><span class="tok">Causal Inference · DiD</span><span class="tok">Hypothesis Testing</span></div></div>
+      <div class="cfg-row"><div class="cfg-key">machine_learning<i>:</i></div><div class="tokens"><span class="tok">Time Series · Prophet</span><span class="tok">Classification</span><span class="tok">Clustering · KMeans</span><span class="tok">RFM Analysis</span><span class="tok">Causal Inference · DiD</span><span class="tok">Hypothesis Testing</span></div></div>
       <div class="cfg-row"><div class="cfg-key">web_apps<i>:</i></div><div class="tokens"><span class="tok">Full-Stack Web</span><span class="tok">Supabase</span><span class="tok">Auth</span><span class="tok">sql.js · WebAssembly</span></div></div>
       <div class="cfg-row"><div class="cfg-key">automation<i>:</i></div><div class="tokens"><span class="tok">n8n</span><span class="tok">Workflow Automation</span><span class="tok">API Integrations</span></div></div>
     </div>
@@ -407,19 +407,19 @@ footer .ok{display:block;margin-bottom:6px}
       </article>
       <article class="proj feat reveal" data-cat="bi ml app">
         <div class="feat-body">
-          <div class="ptags"><span>[live] [finance] [forecasting]</span><span><a href="https://mf-analytics-platform-nmndaxxuzmzhckvswpue3h.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener">github ↗</a></span></div>
+          <div class="ptags"><span>[live] [finance] [advisor-analytics]</span><span><a href="https://mf-analytics-platform-nmndaxxuzmzhckvswpue3h.streamlit.app/" target="_blank" rel="noopener">live ↗</a> <a href="https://github.com/Skpkush/mf-analytics-platform" target="_blank" rel="noopener">github ↗</a></span></div>
           <h3>Mutual Fund Analytics Platform</h3>
-          <p>Yahoo Finance + AMFI → Azure Blob → Data Factory → Azure SQL star schema → risk suite in Python → Prophet NAV forecasts → 4-page Power BI report and a live Streamlit app.</p>
+          <p><b>Which 5 funds should an advisor suggest to a moderate-risk client?</b> Yahoo Finance + AMFI → Azure Blob → Data Factory → Azure SQL star schema → risk suite in Python → 4-page Power BI report and a live Streamlit app. Dashboard screenshots show the 4,961 funds loaded into Power BI.</p>
           <div class="feat-stats">
-            <div><em>14,384</em><span>fund schemes</span></div>
-            <div><em>51</em><span>AMCs</span></div>
-            <div><em>5 + 4</em><span>dim + fact tables</span></div>
-            <div><em>25+</em><span>DAX measures</span></div>
+            <div><em>8,620</em><span>live schemes</span></div>
+            <div><em>9.7M</em><span>daily NAV rows</span></div>
+            <div><em>179 → 5</em><span>funds shortlisted</span></div>
+            <div><em>−3.6%</em><span>worst fall vs −4.8% for peers</span></div>
           </div>
           <ul class="feat-list">
-            <li>Full risk suite: <b>Sharpe, Sortino, Treynor</b>, alpha/beta and max drawdown</li>
-            <li><b>30/60/90-day</b> Prophet NAV forecasts with confidence bands</li>
-            <li>Azure Data Factory pipeline running end to end into a <b>star schema</b></li>
+            <li>Tested the 5-fund shortlist out of sample: return matched peers (<b>9.6% vs 9.5%</b>), with a shallower worst fall in <b>11 of 11</b> overlapping windows</li>
+            <li><b>Trend exploration, not forecasting:</b> Prophet lost to a no-change baseline at 30, 60 and 90 days, so it only describes trends</li>
+            <li>Every project number comes from <b>one generated file</b>, and a test fails if the README drifts from it</li>
           </ul>
           <div class="stackline"><b>stack:</b> azure adf · azure sql · python · prophet · power bi · streamlit</div>
         </div>
@@ -504,7 +504,7 @@ footer .ok{display:block;margin-bottom:6px}
       <tbody>
         <tr><td>Grocery Retail Analytics</td><td>retail</td><td>1.46M transactions</td><td class="v">50.6% coupons go to habitual buyers</td></tr>
         <tr><td>Healthcare Fraud Detection</td><td>healthcare</td><td>558K+ claims</td><td class="v">226× fraud concentration</td></tr>
-        <tr><td>Mutual Fund Platform</td><td>finance</td><td>14,384 schemes</td><td class="v">51 AMCs on one risk framework</td></tr>
+        <tr><td>Mutual Fund Platform</td><td>finance</td><td>9.7M daily NAVs</td><td class="v">5-fund shortlist: −3.6% worst fall vs −4.8% for peers</td></tr>
         <tr><td>Olist E-Commerce</td><td>e-commerce</td><td>112,650 rows</td><td class="v">40+ DAX measures</td></tr>
         <tr><td>QueryScratch</td><td>education</td><td>500 questions</td><td class="v">free SQL sandbox for students</td></tr>
         <tr><td>Customer Segmentation</td><td>retail</td><td>RFM + KMeans</td><td class="v">live Streamlit app</td></tr>
